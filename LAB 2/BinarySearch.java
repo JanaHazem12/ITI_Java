@@ -13,7 +13,7 @@ class BinarySearch{
 				System.out.print(arr[i]+ " ");
 			}
 			 // return the index I found the target in
-				while(start!=end+1){
+				while(start!=end+1){ // start<=end is better
 				if (arr[middle] == target){
 					break;
 				}
