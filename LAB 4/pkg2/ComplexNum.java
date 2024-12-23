@@ -7,7 +7,7 @@ public class ComplexNum<T extends Number>{
 	public T real;
 	public T img;
 	
-	public ComplexNum(T reall, T imgg){ // parametrized
+	public ComplexNum(T reall, T imgg){
         this.real=reall;
         this.img=imgg;
     }
@@ -19,7 +19,7 @@ public class ComplexNum<T extends Number>{
 		
 		return new ComplexNum<Double>(realPartA,imgPartA);
 	}
-	public ComplexNum <Double> subtraction(ComplexNum<Double> c2){
+	public ComplexNum <Double> subtraction(ComplexNum<T> c2){
 		//    subtracting 2 complex numbers //
 		Double realPartS = real.doubleValue() - c2.real.doubleValue();
 		Double imgPartS = img.doubleValue() - c2.img.doubleValue();
@@ -28,7 +28,7 @@ public class ComplexNum<T extends Number>{
 	}
 	public String toString(){
 		String res = " ";
-		res = "ComplexNum= "+real+"+"+img+"j";
+		res = real+"+"+img+"i";
 		return res;
 	}
 }
