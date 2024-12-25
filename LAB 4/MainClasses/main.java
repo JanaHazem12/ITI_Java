@@ -7,7 +7,7 @@ public class main{
 		try{
 		//methods.IdWithinRange(200);
 		
-		methods.IdWithinRange(200);
+		methods.IdWithinRange(400);
 		
 		//methods.IdNegative(200);
 		

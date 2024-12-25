@@ -65,7 +65,7 @@ public class LibraryManagementSystem{
                     library.removeID(delItemId);
                     }
                     catch(ItemNotFoundException ie){
-                        System.out.println("ITEM NOT FOUND !!");
+                        System.out.println(ie.getMessage()); // changeeee
                     }
                     break;
 

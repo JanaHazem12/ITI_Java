@@ -6,7 +6,7 @@ import java.util.List;
 public abstract class LibraryItem{
 	int id;
 	String title;
-	public List <LibraryItem> itemListt = new ArrayList<>(); // array of objects of LI obj.
+//public List <LibraryItem> itemListt = new ArrayList<>(); // array of objects of LI obj.
 
 	public LibraryItem(int id, String title){
 		this.id = id;
