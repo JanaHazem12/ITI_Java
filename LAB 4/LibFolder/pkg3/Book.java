@@ -6,6 +6,7 @@ import pkg3.LibraryItem;
 
 public class Book extends LibraryItem{
 	String author;
+	Client BorrowingClient;
 	public Book(int ID, String title, String authorr){
 		super(ID, title);
 		this.author = authorr;

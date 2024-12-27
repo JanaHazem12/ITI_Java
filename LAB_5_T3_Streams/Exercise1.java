@@ -26,9 +26,9 @@ public class Exercise1 {
       countries.stream()
       .map(eachCountry -> eachCountry.getCities().stream()
       .max(Comparator.comparing(City::getPopulation)))
-      .filter(Optional::isPresent)
-      .map(Optional::get) // getting data without "Optional" in it
-      .forEach(x -> System.out.println(x));;
+      .filter(Optional::isPresent) // filters NULL values
+      .map(Optional::get) // converting from optional to the data we want
+      .forEach(x -> System.out.println(x));
    }
 
 }

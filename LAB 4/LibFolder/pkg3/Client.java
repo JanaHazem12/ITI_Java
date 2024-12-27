@@ -11,7 +11,7 @@ public class Client{
 		email = emailC;
 	}
 	public String getClientDetails(){
-		return "Client Id: "+ID+" Client Name: "+name+" Client Email: "+email;
+		return "Client Id: "+ID+" - "+ "Client Name: "+name+" - "+" Client Email: "+email;
 	}
 }
 
