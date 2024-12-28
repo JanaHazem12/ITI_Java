@@ -31,10 +31,12 @@ public class Exercise2 {
         // get the city by country code THEN get Continent by country code
 
         // here, it's a set of strings NOT list
-         List <String> continents = inMemoryWorldDao.getAllContinents().stream().collect(Collectors.toList());
+        // List <String> continents = inMemoryWorldDao.getAllContinents().stream().collect(Collectors.toList());
         
          // converted continents to stream
-         continents.stream()
+         
+         //we can stream on a set 3ady, does NOT have to be a list
+         inMemoryWorldDao.getAllContinents().stream()
          // map each continent to a list of highly populated cities
          .map(continent -> highestPopulatedCities.stream()
         // filter the cities by continent (check if this city is in this continent)        

@@ -70,9 +70,9 @@ public class Library{
 					//System.out.println("delete 3");
 					if(xx == RemoveID){
 					clientIDs.remove(xx);
-					}				
+								
 					System.out.println("ID: "+c.ID+" Removed Successfully");
-					return;
+					return;}
 				}
 				//return;
 			}
@@ -114,7 +114,7 @@ public class Library{
 	public void removeID(int RemoveBookId) throws ItemNotFoundException{
 		//int f = 0;
 		for(LibraryItem b : itemList){
-			System.out.println("HENAA");
+			System.out.println("ID unavailable");
 			if(b.id == RemoveBookId){
 				itemList.remove(b);
 				//f=1;
@@ -128,7 +128,7 @@ public class Library{
 				return;
 			}
 		}
-		// System.out.println("sfcedtfgdexsg"+itemsIDs.size());
+		 //System.out.println("ID unavailable");
 		
 		for(int i=0;i<itemsIDs.size();i++)
 		{
@@ -253,7 +253,10 @@ public class Library{
 	public void updateItem(int itemmIDD, String changeTitle){
 		//if(OptionItem == 1){ // change title
 			for(LibraryItem il:itemList){
-				if(il.id == itemmIDD){
+				if(itemList.isEmpty()){
+					System.out.println("NO items to update !");
+				}
+				else if(il.id == itemmIDD){
 					//LibraryItem lii;
 					il.title = changeTitle;
 					System.out.println("Item Updated successfully !");

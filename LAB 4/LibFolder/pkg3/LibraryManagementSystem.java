@@ -289,11 +289,18 @@ public class LibraryManagementSystem{
                 case 14: // Update Item
                     System.out.print("Enter Item ID to update: ");
                     int ItemIDtoUpdatee = scanner.nextInt();
+                    for(LibraryItem il:library.itemList){
+                        if(library.itemList.size()==0 || il.id!=ItemIDtoUpdatee){
+                            System.out.println("ID unavaiable !");  
+                    }
+                    else{
                     System.out.print("Enter the new title: ");
                     scanner.nextLine();
                     String updatedTitle = scanner.nextLine();
                     library.updateItem(ItemIDtoUpdatee, updatedTitle);
                     break;
+                    }
+                }break;
 
                 case 15:
                     System.out.println("Client Details => ");
